@@ -5,4 +5,15 @@
     font-family: "Inria Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+
+    padding: 0;
+    margin: 0;
+
+    input:focus {
+        outline: none;
+    }
+
+    body {
+        background-color: #e2f0f9;
+    }
 }

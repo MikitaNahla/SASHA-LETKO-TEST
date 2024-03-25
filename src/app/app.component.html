@@ -1,3 +1,16 @@
-<div class="header">
-  <app-logo></app-logo>
+<app-header>
+  <div class="content">
+    <app-logo></app-logo>
+    <div class="links">
+      <span class="link">knowledge base</span>
+      <span class="link">generate picture</span>
+    </div>
+    <div class="search">
+      <input type="text" class="input">
+      <img src="assets/images/loop.png" class="loop"/>
+    </div>
+  </div>
+</app-header>
+<div class="app-content">
+  <router-outlet></router-outlet>
 </div>

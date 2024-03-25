@@ -1,0 +1,51 @@
+.content-wrapper {
+    width: 100%;
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        .text {
+            max-width: 35.5rem;
+            .title {
+                font-weight: bold;
+                font-size: 2.875rem;
+            }
+
+            .text-content {
+                // max-width: 44.5rem;
+            }
+        }
+
+        .images {
+
+            display: flex;
+            height: 15rem;
+            .human {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin-right: 1rem;
+
+                .nikita {
+                   width: 5.625rem;
+                   height: 11.875rem; 
+                }
+            }
+
+            .painting {
+                .painting-img {
+                    width: 15.82rem;
+                    height: 13.6rem;
+                }
+            }
+        }
+    }
+
+    .info-content {
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 1rem;
+        }
+    }
+}
