@@ -1,8 +1,10 @@
 .content {
-    width: 80%;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
+
+    padding: 0 2rem 0 2rem;
 
     .links {
         display: flex;
@@ -10,12 +12,12 @@
         align-items: center;
 
         color: #fff;
-        font-weight: 500;
         font-size: 1.875rem;
 
         .link {
             margin-right: 20px;
             cursor: pointer;
+            font-weight: 500;
         }
     }
 
@@ -40,13 +42,4 @@
             cursor: pointer;
         }
     }
-}
-
-.app-content {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // height: calc(100vh - 120px);
-
-    padding: 6rem 11rem 11rem 11rem;
 }

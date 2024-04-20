@@ -2,7 +2,7 @@
 
 * {
     font-size: 1rem;
-    font-family: "Inria Sans", sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -14,6 +14,6 @@
     }
 
     body {
-        background-color: #e2f0f9;
+        background-color: rgb(var(--os-background-color));
     }
 }

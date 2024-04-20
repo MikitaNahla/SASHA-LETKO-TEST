@@ -1,30 +1,17 @@
 <div class="content-wrapper">
-    <div class="header-content">
-        <div class="text">
-            <div class="title">Some words before you start</div>
-            <div class="text-content">ISSAPPV was created especially for help you to study different aspects of subject 
-                area of “ART”.  This service provides some functionality that makes your studying more interesting and 
-                recognizable.</div>
+    <div class="content-wrapper__header">
+        <div class="content-wrapper__header-content">
+            <div class="content-wrapper__header-content__left" *ngIf="{logo: mainLogo$ | async} as logoData">
+                <img [src]="this.imageService.getImage(logoData.logo!, 'png')" class="content-wrapper__header-content__left__image">
+            </div>
+            <div class="content-wrapper__header-content__right">
+                <div class="content-wrapper__header-content__right__text">
+                    Start your studying with our system
+                </div>
+                <button class="content-wrapper__header-content__right__button" routerLink="../firstSteps">
+                    START
+                </button>
+            </div>
         </div>
-        <div class="images">
-            <div class="human">
-                <img src="assets/images/nikita.png" class="nikita"/>
-            </div>
-            <div class="painting">
-                <img src="assets/images/painting.png" class="painting-img">
-            </div>
-        </div>
-    </div>
-    <div class="info-content">
-        <ng-container *ngFor="let row of infoCards">
-            <div class="info-row">
-                <ng-container *ngFor="let infoCard of row">
-                    <app-info-item
-                        [info]="infoCard"
-                    >
-                    </app-info-item>
-                </ng-container>
-            </div>
-        </ng-container>
     </div>
 </div>

@@ -15,6 +15,34 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'aboutUs',
+    loadComponent: () =>
+      import('./core/about-us/about-us.component').then(
+        (value) => value.AboutUsComponent
+      ),
+  },
+  {
+    path: 'firstSteps',
+    loadComponent: () =>
+      import('./core/first-steps/first-steps.component').then(
+        (value) => value.FirstStepsComponent
+      ),
+  },
+  {
+    path: 'knowledgeBase',
+    loadComponent: () =>
+      import('./core/knowledge-base/knowledge-base.component').then(
+        (value) => value.KnowledgeBaseComponent
+      ),
+  },
+  {
+    path: 'generatePicture',
+    loadComponent: () =>
+      import('./core/generate-picture/generate-picture.component').then(
+        (value) => value.GeneratePictureComponent
+      ),
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'main',
