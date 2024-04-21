@@ -14,7 +14,7 @@ import { HeaderAnimationDirective } from './core/directives/header-animation.dir
     AppComponent,
     HeaderComponent,
     LogoComponent,
-    HeaderAnimationDirective,
+    HeaderAnimationDirective
   ],
   imports: [
     BrowserModule,

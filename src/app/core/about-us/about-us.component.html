@@ -1,1 +1,25 @@
-<p>about-us works!</p>
+<div class="content-wrapper">
+  <div class="content-wrapper__header-content">
+    <div class="content-wrapper__header-content__title">ABOUT US</div>
+    <div class="content-wrapper__header-content__text">{{this.description}}</div>
+  </div>
+  <div class="content-wrapper__main-content">
+    <div class="content-wrapper__main-content__title">
+      <div class="content-wrapper__main-content__title__horizontal-line"></div>
+        OUR TEAM
+      <div class="content-wrapper__main-content__title__horizontal-line"></div>
+    </div>
+    <ng-container class="content-wrapper__main-content__items" *ngFor="let teammate of this.team">
+      <div class="content-wrapper__main-content__items__item">
+        <div class="content-wrapper__main-content__items__item__image">
+          <img alt="{{teammate.fullName}}" [src]="this.imageService.getImage(teammate.imgName!, 'png')"/>
+        </div>
+        <div class="content-wrapper__main-content__items__item__description">
+          {{teammate.description}}
+        </div>
+      </div>
+      <div class="content-wrapper__main-content__items__horizontal-line"></div>
+    </ng-container>
+  </div>
+
+</div>
