@@ -1,0 +1,25 @@
+.content-wrapper {
+  padding-top: 8em;
+  color: #3C220F /*rgb(var(--os-font-color))*/;
+
+  &__picture-info {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+
+      &__figure {
+        justify-content: center;
+        display: flex;
+
+        &__image {
+          width: 50%;
+          height: 50%;
+
+          border: solid 0.4em rgb(var(--os-primary-color));
+
+        }
+      }
+    }
+  }
+}

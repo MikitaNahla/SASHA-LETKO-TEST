@@ -1,1 +1,63 @@
-<p>knowledge-base works!</p>
+<div class="content-wrapper">
+
+  <div class="content-wrapper__search">
+
+    <div class="content-wrapper__search__search-string">
+      <input class="content-wrapper__search__search-string__input" type="text">
+      <div class="content-wrapper__search__search-string__line"></div>
+      <div class="content-wrapper__search__search-string__container">
+        <button class="content-wrapper__search__search-string__container__button">
+          <img
+            alt="lupe"
+            [src]="imageService.getImage('lupe', 'png')"
+            class="content-wrapper__search__search-string__container__button__search"
+          >
+        </button>
+      </div>
+    </div>
+
+    <div class="content-wrapper__search__flag-menu">
+      <button (click)="toggleMenu()" class="content-wrapper__search__flag-menu__button">
+        <div class="content-wrapper__search__flag-menu__button__name">Flags</div>
+        <div class="content-wrapper__search__flag-menu__button__triangle"></div>
+      </button>
+
+      <div *ngIf="isShowingMenu" class="content-wrapper__search__flag-menu__items">
+        <ng-container *ngFor="let tag of this.getFlags()">
+          <button (click)="addFlag(tag)" class="content-wrapper__search__flag-menu__items__tag">{{tag}}</button>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-wrapper__chosen-tags">
+    <ng-container *ngFor="let flag of this.getChosenFlags()">
+      <div class="content-wrapper__chosen-tags__tag">
+        <span class="content-wrapper__chosen-tags__tag__name">{{flag}}</span>
+        <img
+          alt='cross'
+          [src]="imageService.getImage('cross', 'png')"
+          (click)="eraseFlag(flag)"
+          class="content-wrapper__chosen-tags__cross"
+        >
+      </div>
+    </ng-container>
+  </div>
+
+  <ngx-masonry [options]="this.masonryOptions" class="content-wrapper__masonry-content">
+    <div class="content-wrapper__masonry-content__items">
+      <div ngxMasonryItem class="content-wrapper__masonry-content__items__item" *ngFor="let tile of this.getTiles()">
+        <figure class="content-wrapper__masonry-content__items__item__figure">
+          <img
+            alt="tile.imgName"
+            [src]="imageService.getImage(tile.imgName, 'png')"
+            (click)="navigateToPicturePage(tile.id)"
+            class="content-wrapper__masonry-content__items__item__figure__image"
+          >
+        </figure>
+      </div>
+    </div>
+  </ngx-masonry>
+
+</div>

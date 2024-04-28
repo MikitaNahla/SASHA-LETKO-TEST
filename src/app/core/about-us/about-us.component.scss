@@ -1,80 +1,85 @@
 .content-wrapper {
-  color: #3C220F;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-
-  display: grid;
+  padding: 10em;
+  color: #3C220F /*rgb(var(--os-font-color))*/;
 
   &__header-content {
-    position: relative;
-    margin-top: 12em;
-
-    justify-content: center;
-    display: grid;
-    align-items: center;
+    text-align: center;
 
     &__title {
       font-weight: bold;
-      font-size: 5.75rem;
+      font-size: 6rem;
     }
 
     &__text {
-      margin-top: 2em;
       max-width: 110vh;
-      text-align: center;
+      margin: auto;
+      padding-top: 3em;
       font-size: 2.25rem;
     }
   }
 
   &__main-content{
-    position: relative;
-    justify-content: center;
-    align-items: center;
+    padding-top: 12em;
 
     &__title {
-      margin-top: 1em;
-
-      height: 80%;
-      width: 100%;
-
-      justify-content: space-around;
-      align-items: center;
       display: flex;
 
-      font-weight: bold;
-      font-size: 4.75rem;
+      &__name {
+        text-align: center;
+        width: 100%;
 
+        font-weight: bold;
+        font-size: 4rem;
+      }
 
       &__horizontal-line {
-        position: relative;
-        height: 0.1%;
-        width: 30%;
-
-        background-color: #3C220F;
-
+        align-self: center;
+        width: 100%;
+        height: 0.2vh;
+        background-color: #3C220F /*rgb(var(--os-font-color))*/;
       }
 
     }
 
     &__items {
-      justify-content: center;
-      display: flex;
-      width: 100%;
-      height: 100%;
 
-      &__item{
-        justify-content: space-between;
+      &__item {
+        padding: 0 2.5em 0 2.5em;
+        margin-top: 2.5em;
+        margin-bottom: 6.5em;
         display: flex;
+        border-bottom: solid 0.2vh;
 
-      }
+        &__icon{
+          width: 45vh;
+          height: 70vh;
+          align-items: center;
+          padding-right: 4em;
 
-      &__horizontal-line {
-        height: 0.1%;
-        width: 50%;
+          &__image {
+            width: 45vh;
+            height: 60vh;
+            background-color: lightgrey;
 
-        background-color: #3C220F;
+          }
+
+          &__description {
+            padding-top: 0.5em;
+            text-align: center;
+
+            font-weight: bolder;
+            font-size: 2rem;
+          }
+
+        }
+
+        &__description {
+          align-self: auto;
+          padding-top: 2em;
+          font-weight: normal;
+          font-size: 2.25rem;
+        }
+
       }
 
     }

@@ -1,0 +1,150 @@
+.content-wrapper {
+  padding-top: 8em;
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__search-string {
+      width: 80%;
+      height: 5vh;
+
+      border-top: solid 0.2em;
+      border-bottom: solid 0.2em;
+      border-left: solid 0.3em;
+      border-right: solid 0.3em;
+      border-image: linear-gradient(
+          to right,
+          rgb(var(--os-fromGradient-color)),
+          rgb(var(--os-toGradient-color))
+      ) 30%;
+
+      display: flex;
+      flex-direction: row;
+
+      &__input {
+        width: 100%;
+        padding-left: 0.25em;
+
+        border: none;
+
+        font-size: 3vh;
+      }
+
+      &__line {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        align-self: center;
+        height: 2em;
+        width: 0.1em;
+
+        background-color: rgb(var(--os-primary-color));
+      }
+
+      &__container {
+
+        &__button {
+
+          &__search {
+
+          }
+
+        }
+      }
+    }
+
+    &__flag-menu {
+      margin-left: 2em;
+      background-color: rgb(var(--os-secondary-color));
+
+      display: flex;
+      flex-direction: column;
+
+      &__button {
+        border: none;
+        background-color: rgb(var(--os-secondary-color));
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__name {
+          color: rgb(var(--os-primary-color));
+        }
+
+        &__triangle {
+          border-left: 0.4em solid transparent;
+          border-right: 0.4em solid transparent;
+          border-top: 0.6em solid rgb(var(--os-primary-color));
+        }
+      }
+
+      &__items {
+        margin-top: 2em;
+        position: absolute;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+
+        &__tag {
+          text-align: left;
+          font-size: 1.2rem;
+
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: solid rgb(var(--os-primary-color)) 0.1em;
+
+          background: rgb(var(--os-secondary-color));
+          color: rgb(var(--os-primary-color));
+        }
+      }
+    }
+  }
+
+  &__chosen-tags {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+
+    &__tag {
+      padding-left: 5%;
+
+      &__name {
+
+        color: rgb(var(--os-primary-color));
+        font-size: 1.2rem;
+
+
+      }
+
+    }
+  }
+
+  &__masonry-content {
+    padding-top: 1em;
+
+    &__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      &__item {
+        width: 20%;
+
+        &__figure {
+
+          &__image {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5em;
+          }
+        }
+      }
+
+    }
+
+  }
+}

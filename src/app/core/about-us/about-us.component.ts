@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {InfoTeammateComponent} from "./info-teammate/info-teammate.component";
 import {InfoTeammate} from "../types/InfoTeammate";
 import {ImageService} from "../services/image.service";
+import {ThemeSwitcherService} from "../services/theme-switcher.service";
 
 @Component({
   selector: 'app-about-us',
@@ -59,8 +60,9 @@ export class AboutUsComponent {
   ];
 
   constructor(
-    readonly imageService: ImageService
+    public imageService: ImageService,
+    private themeSwitcherService: ThemeSwitcherService
   ) {
-  }
+  };
 
 }

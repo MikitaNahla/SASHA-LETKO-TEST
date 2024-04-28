@@ -6,19 +6,25 @@
   <div class="content-wrapper__main-content">
     <div class="content-wrapper__main-content__title">
       <div class="content-wrapper__main-content__title__horizontal-line"></div>
-        OUR TEAM
+        <div class="content-wrapper__main-content__title__name">OUR TEAM</div>
       <div class="content-wrapper__main-content__title__horizontal-line"></div>
     </div>
     <ng-container class="content-wrapper__main-content__items" *ngFor="let teammate of this.team">
       <div class="content-wrapper__main-content__items__item">
-        <div class="content-wrapper__main-content__items__item__image">
-          <img alt="{{teammate.fullName}}" [src]="this.imageService.getImage(teammate.imgName!, 'png')"/>
+        <div class="content-wrapper__main-content__items__item__icon">
+          <!--<img class="content-wrapper__main-content__items__item__icon__image"
+               alt="{{teammate.fullName}}"
+               [src]="this.imageService.getImage(teammate.imgName!, 'png')"
+          />-->
+          <div class="content-wrapper__main-content__items__item__icon__image"></div>
+          <div class="content-wrapper__main-content__items__item__icon__description">
+            {{teammate.fullName}}
+          </div>
         </div>
         <div class="content-wrapper__main-content__items__item__description">
           {{teammate.description}}
         </div>
       </div>
-      <div class="content-wrapper__main-content__items__horizontal-line"></div>
     </ng-container>
   </div>
 

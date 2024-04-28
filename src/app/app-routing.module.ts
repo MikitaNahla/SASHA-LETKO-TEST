@@ -36,6 +36,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'knowledgeBase/:id',
+    loadComponent: () =>
+      import('./core/knowledge-base/picture-page/picture-page.component').then(
+        (value) => value.PicturePageComponent
+      )
+  },
+  {
     path: 'generatePicture',
     loadComponent: () =>
       import('./core/generate-picture/generate-picture.component').then(

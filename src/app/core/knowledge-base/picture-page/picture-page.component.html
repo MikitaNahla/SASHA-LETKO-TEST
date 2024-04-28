@@ -1,0 +1,45 @@
+<div class="content-wrapper">
+
+  <div class="content-wrapper__picture-info">
+
+    <div class="content-wrapper__picture-info__container">
+      <figure class="content-wrapper__picture-info__container__figure">
+        <img
+          alt="testPicture"
+          [src]="imgService.getImage(testPicture.name , 'png')"
+          class="content-wrapper__picture-info__container__figure__image"
+        >
+      </figure>
+    </div>
+  </div>
+
+  <div class="content-wrapper__author-name__subscription">
+
+    <div class="content-wrapper__author-name__subscription__name-author">{{testPicture.name}}</div>
+
+    <div class="content-wrapper__author-name__subscription__menu-actions">
+
+      <button (click)="showActions()" class="content-wrapper__author-name__subscription__menu-actions__button">
+        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
+        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
+        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
+      </button>
+
+      <div *ngIf="isShowingActions" class="content-wrapper__author-name__subscription__menu-actions__actions">
+        <ng-container *ngFor="let action of this.getActions()">
+          <button class="content-wrapper__author-name__subscription__menu-actions__actions__action">
+            {{action}}
+          </button>
+        </ng-container>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="content-wrapper__picture-description">
+    <span class="content-wrapper__picture-description__text">
+      {{testPicture.description}}
+    </span>
+  </div>
+
+</div>
