@@ -96,6 +96,6 @@ export class KnowledgeBaseComponent implements OnInit {
 
   public getTiles(): Tile[] {
     return this.tiles;
-}
+  }
 
 }

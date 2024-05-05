@@ -21,7 +21,11 @@ export class PicturePageComponent {
 
   public testPicture: Picture = {
     id: 0,
-    description: 'This is test information about picture',
+    description: 'The Scream is an expressionist painting created by Edvard Munch in 1893.' +
+      ' It depicts an angst-ridden figure with its mouth open in a scream, set against a dark and turbulent sky.' +
+      ' The painting has become one of the most iconic and recognizable images in the history of art, and is often' +
+      ' associated with existential anxiety and the human condition. It is currently held in the collection of the' +
+      ' National Museum of Art, Architecture and Design in Oslo, Norway.',
     name: 'cry',
     imgUrl: '',
   };

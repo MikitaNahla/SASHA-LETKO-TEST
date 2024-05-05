@@ -13,23 +13,27 @@
     </div>
   </div>
 
-  <div class="content-wrapper__author-name__subscription">
+  <div class="content-wrapper__subscription">
 
-    <div class="content-wrapper__author-name__subscription__name-author">{{testPicture.name}}</div>
+    <div class="content-wrapper__subscription__name-author">{{testPicture.name}}</div>
 
-    <div class="content-wrapper__author-name__subscription__menu-actions">
+    <div class="content-wrapper__subscription__menu-actions">
 
-      <button (click)="showActions()" class="content-wrapper__author-name__subscription__menu-actions__button">
-        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
-        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
-        <span class="content-wrapper__author-name__subscription__menu-actions__button__circle"></span>
+      <button (click)="showActions()" class="content-wrapper__subscription__menu-actions__button">
+        <div class="content-wrapper__subscription__menu-actions__button__circle"></div>
+        <div class="content-wrapper__subscription__menu-actions__button__circle"></div>
+        <div class="content-wrapper__subscription__menu-actions__button__circle"></div>
       </button>
 
-      <div *ngIf="isShowingActions" class="content-wrapper__author-name__subscription__menu-actions__actions">
-        <ng-container *ngFor="let action of this.getActions()">
-          <button class="content-wrapper__author-name__subscription__menu-actions__actions__action">
+      <div *ngIf="isShowingActions" class="content-wrapper__subscription__menu-actions__actions">
+        <ng-container
+          *ngFor="let action of this.getActions()"
+          class="content-wrapper__subscription__menu-actions__actions__action">
+
+          <button class="content-wrapper__subscription__menu-actions__actions__action__button">
             {{action}}
           </button>
+
         </ng-container>
       </div>
     </div>

@@ -34,12 +34,12 @@
   <div class="content-wrapper__chosen-tags">
     <ng-container *ngFor="let flag of this.getChosenFlags()">
       <div class="content-wrapper__chosen-tags__tag">
-        <span class="content-wrapper__chosen-tags__tag__name">{{flag}}</span>
+        <div class="content-wrapper__chosen-tags__tag__name">{{flag}}</div>
         <img
           alt='cross'
           [src]="imageService.getImage('cross', 'png')"
           (click)="eraseFlag(flag)"
-          class="content-wrapper__chosen-tags__cross"
+          class="content-wrapper__chosen-tags__tag__cross"
         >
       </div>
     </ng-container>

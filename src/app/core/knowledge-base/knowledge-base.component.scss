@@ -19,6 +19,7 @@
           rgb(var(--os-fromGradient-color)),
           rgb(var(--os-toGradient-color))
       ) 30%;
+      background-color: white;
 
       display: flex;
       flex-direction: row;
@@ -30,6 +31,8 @@
         border: none;
 
         font-size: 3vh;
+
+        background-color: white;
       }
 
       &__line {
@@ -45,9 +48,16 @@
       &__container {
 
         &__button {
+          top: 50%;
+          left: 50%;
+
+          border: none;
+          background-color: rgb(var(--os-secondary-color));
 
           &__search {
 
+            width: 40%;
+            height: 40%;
           }
 
         }
@@ -56,14 +66,14 @@
 
     &__flag-menu {
       margin-left: 2em;
-      background-color: rgb(var(--os-secondary-color));
+      background-color: rgb(var(--os-background-color));
 
       display: flex;
       flex-direction: column;
 
       &__button {
         border: none;
-        background-color: rgb(var(--os-secondary-color));
+        background-color: rgb(var(--os-background-color));
 
         display: flex;
         flex-direction: row;
@@ -96,7 +106,7 @@
           border-right: none;
           border-bottom: solid rgb(var(--os-primary-color)) 0.1em;
 
-          background: rgb(var(--os-secondary-color));
+          background: rgb(var(--os-background-color));
           color: rgb(var(--os-primary-color));
         }
       }
@@ -104,6 +114,8 @@
   }
 
   &__chosen-tags {
+    width: 10%;
+    height: 10%;
     padding-top: 1em;
     display: flex;
     flex-direction: row;
@@ -111,19 +123,29 @@
 
     &__tag {
       padding-left: 5%;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
 
       &__name {
 
         color: rgb(var(--os-primary-color));
         font-size: 1.2rem;
+      }
 
+      &__cross {
+        margin-left: 0.5em;
 
+        width: 10%;
+        height: 60%;
       }
 
     }
   }
 
   &__masonry-content {
+    display: flex;
+    justify-content: center;
     padding-top: 1em;
 
     &__items {
@@ -139,6 +161,7 @@
           &__image {
             width: 100%;
             height: 100%;
+            border: solid #ffffff 0.1em;
             border-radius: 0.5em;
           }
         }

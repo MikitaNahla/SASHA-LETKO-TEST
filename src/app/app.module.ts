@@ -8,7 +8,6 @@ import { LogoComponent } from './components/logo/logo.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeSwitcherComponent } from './core/components/theme-switcher/theme-switcher.component';
 import { HeaderAnimationDirective } from './core/directives/header-animation.directive';
-import { PicturePageComponent } from './core/knowledge-base/picture-page/picture-page.component';
 
 @NgModule({
   declarations: [
